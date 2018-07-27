@@ -1,0 +1,24 @@
+{
+  "name": "sportization",
+  "version": "1.0.0",
+  "description": "Welcome to Sportization's webclient source code. Check back soon for more details!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gusaiani/sportization-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gusaiani/sportization-frontend/issues"
+  },
+  "homepage": "https://github.com/gusaiani/sportization-frontend#readme",
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}
