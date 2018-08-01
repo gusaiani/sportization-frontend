@@ -1,11 +1,11 @@
-import {Component, Fragment} from 'react'
-import Container from './styles'
+import {Component} from 'react'
+import Container, {Img} from './styles'
 
 export default class Header extends Component {
   render() {
     return (
       <Container>
-        <img src="/static/svg/sportization-logo.svg"/>
+        <Img src="/static/images/sportization-logo.png"/>
       </Container>
     )
   }

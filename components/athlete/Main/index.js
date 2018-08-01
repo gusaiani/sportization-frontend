@@ -1,5 +1,6 @@
 import {Component, Fragment} from 'react'
 import Container from './styles'
+import GreatMoments from '../GreatMoments'
 
 export default class AthleteMain extends Component {
   render() {
@@ -9,6 +10,8 @@ export default class AthleteMain extends Component {
         <h2>Beach Volleyball · Retired Athlete</h2>
         <h3>Born in Feb. 14, 1969 in Rio de Janeiro, Brazil</h3>
         <h3>Lives in Fort Lauderdale, USA</h3>
+
+        <GreatMoments />
       </Container>
     )
   }
