@@ -4,9 +4,11 @@
   "description": "Welcome to Sportization's webclient source code. Check back soon for more details!",
   "main": "index.js",
   "scripts": {
-    "start": "next",
+    "build": "next build",
+    "start": "yarn clear-cache && next start -p $PORT",
+    "clear-cache": "rm -rf node_modules/.cache/babel-loader",
     "dev": "next",
-    "heroku-postbuild": "next build"
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
