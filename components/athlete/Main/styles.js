@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
 export default styled.div`
-  color: #222;
   float: left;
-  font-family: 'Helvetica', sans-serif;
   margin-left: 40px;
 
   h1 {

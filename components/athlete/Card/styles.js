@@ -1,11 +1,8 @@
 import styled from 'styled-components'
 
 export default styled.div`
-  color: #222;
-  float: left;
-  margin-left: 20px;
   position: relative;
-  width: 300px;
+  width: 100%;
 
   > img {
     border-radius: 12px;
@@ -15,7 +12,6 @@ export default styled.div`
   div.name {
     background: white;
     border-radius: 8px;
-    font-family: 'Helvetica', sans-serif;
     font-size: 22px;
     font-weight: 700;
     left: 10px;
@@ -29,7 +25,6 @@ export default styled.div`
     background: white;
     border-radius: 8px;
     display: flex;
-    font-family: 'Helvetica', sans-serif;
     font-size: 18px;
     font-weight: 300;
     right: 10px;
