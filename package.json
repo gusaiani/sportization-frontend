@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "yarn clear-cache && next start -p $PORT",
     "clear-cache": "rm -rf node_modules/.cache/babel-loader",
-    "dev": "next",
+    "dev": "node server/server.js -p $PORT",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
@@ -29,7 +29,8 @@
     "babel-plugin-styled-components": "^1.5.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-define": "^1.2.0",
-    "express": "^4.16.2",
+    "express": "^4.16.3",
+    "isomorphic-unfetch": "^2.1.1",
     "jest": "^23.4.1",
     "jest-styled-components": "^5.0.1",
     "next": "^6.1.1",
