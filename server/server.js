@@ -28,7 +28,7 @@ const startServer = () => {
         '/athletes/:slug',
         (req, res) => {
           const actualPage = '/index'
-          const queryParams = {id: req.params.slug, ...req.query}
+          const queryParams = {slug: req.params.slug, ...req.query}
           res.locals.app.render(req, res, actualPage, queryParams)
         }
       )

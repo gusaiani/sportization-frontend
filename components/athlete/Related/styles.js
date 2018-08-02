@@ -8,7 +8,6 @@ export default styled.div`
   }
 
   div {
-    background-image: url(https://res.cloudinary.com/du17bhl36/image/upload/v1533086881/Adriana_Behar.jpg);
     background-position: center;
     background-size: contain;
     border-radius: 6px;

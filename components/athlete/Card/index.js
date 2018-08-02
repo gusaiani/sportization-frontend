@@ -1,15 +1,17 @@
 import {Component, Fragment} from 'react'
 import Container from './styles'
+import {imageUrl} from 'utils/image'
 
 export default class AthleteCard extends Component {
   render() {
+    const {name, country, photo} = this.props
     return (
       <Container>
-        <img src="https://res.cloudinary.com/du17bhl36/image/upload/v1533086881/Adriana_Behar.jpg"/>
-        <div className="name">Adriana Behar</div>
+        <img src={imageUrl(photo)}/>
+        <div className="name">{name}</div>
         <div className="flag">
-          <span>Bra</span>
-          <img src="https://res.cloudinary.com/du17bhl36/image/upload/v1533091025/Flag_of_Brazil.svg"/>
+          <span>{country}</span>
+          <img src={imageUrl('Flag_of_Brazil.svg')}/>
         </div>
       </Container>
     )

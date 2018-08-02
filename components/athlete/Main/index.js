@@ -4,14 +4,16 @@ import GreatMoments from '../GreatMoments'
 
 export default class AthleteMain extends Component {
   render() {
+    const {fullName, sport, jobTitle, birthDate, birthPlace,
+           hometown, photo} = this.props
     return (
       <Container>
-        <h1>Adriana Brandão Behar</h1>
-        <h2>Beach Volleyball · Retired Athlete</h2>
-        <h3>Born in Feb. 14, 1969 in Rio de Janeiro, Brazil</h3>
-        <h3>Lives in Fort Lauderdale, USA</h3>
+        <h1>{fullName}</h1>
+        <h2>{sport} · {jobTitle}</h2>
+        <h3>Born in {birthDate} in {birthPlace}</h3>
+        <h3>Lives in {hometown}</h3>
 
-        <GreatMoments />
+        <GreatMoments photo={photo} />
       </Container>
     )
   }
