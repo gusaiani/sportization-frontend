@@ -7,7 +7,7 @@ export default styled.div`
     text-transform: uppercase;
   }
 
-  div {
+  a {
     background-position: center;
     background-size: contain;
     border-radius: 6px;

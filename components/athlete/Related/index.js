@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import {Component} from 'react'
 import Container from './styles'
 import data from 'lib/data'
 import {imageUrl} from 'utils/image'
 
-export default class AthleteCard extends Component {
+export default class Related extends Component {
   render() {
     const athletes = Object.keys(data).map((key) => {
       return {
@@ -19,7 +20,13 @@ export default class AthleteCard extends Component {
         {athletes.map(({slug, photo}) => {
           const photoUrl = imageUrl(photo)
           return (
-            <div style={{backgroundImage: `url(${photoUrl})`}}/>
+            <Link 
+              key={slug}
+              href={`/athletes?slug=${slug}`}
+              as={`/athletes/${slug}`}
+            >
+              <a style={{backgroundImage: `url(${photoUrl})`}}/>
+            </Link>
           )
         })}
       </Container>
