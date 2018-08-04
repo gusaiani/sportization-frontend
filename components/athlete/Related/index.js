@@ -15,12 +15,12 @@ export default class Related extends Component {
 
     return (
       <Container>
-        <h5>Similar Athletes</h5>
+        <h5>Related People</h5>
 
         {athletes.map(({slug, photo}) => {
           const photoUrl = imageUrl(photo)
           return (
-            <Link 
+            <Link
               key={slug}
               href={`/athletes?slug=${slug}`}
               as={`/athletes/${slug}`}
