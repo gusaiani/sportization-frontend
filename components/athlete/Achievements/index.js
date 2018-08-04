@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Container from './styles'
 import {imageUrl} from 'utils/image'
+import {ordinal} from 'utils/ordinal'
 
 export default class AthleteAchievements extends Component {
   render() {
@@ -9,9 +10,13 @@ export default class AthleteAchievements extends Component {
       <Container>
         <h5>Top Achievements</h5>
 
-        {achievements.map(({times, achievement}) => {
+        {achievements.map(({event, times, rank}) => {
           return (
-            <p>{times}× {achievement}</p>
+            <div>
+              <p>{event}</p>
+              <p>{ordinal(rank)}</p>
+              <p>{times}×</p>
+            </div>
           )
         })}
       </Container>

@@ -10,12 +10,18 @@ export default styled.div`
   }
 
   div {
-    background-position: center;
-    background-size: cover;
-    border-radius: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
     float: left;
-    margin: 0 10px 10px 0;
-    height: 120px;
-    width: 120px;
+    width: 180px;
+    display: flex;
+    flex-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 16px;
+
+    p {
+      text-align: center;
+    }
   }
 `
