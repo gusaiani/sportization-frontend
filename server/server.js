@@ -33,6 +33,23 @@ const startServer = () => {
         }
       )
 
+      server.get(
+        '/teams',
+        (req, res) => {
+          const actualPage = '/teams/index'
+          res.locals.app.render(req, res, actualPage)
+        }
+      )
+
+      server.get(
+        '/teams/:slug',
+        (req, res) => {
+          const actualPage = '/teams/index'
+          const queryParams = {slug: req.params.slug, ...req.query}
+          res.locals.app.render(req, res, actualPage, queryParams)
+        }
+      )
+
       server.get('*', (req, res) => {
         return handle(req, res)
       })

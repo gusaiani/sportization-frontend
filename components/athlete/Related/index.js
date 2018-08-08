@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import {Component} from 'react'
 import Container from './styles'
-import data from 'lib/data'
+import athletesData from 'lib/data/athletes'
 import {imageUrl} from 'utils/image'
 
 export default class Related extends Component {
   render() {
-    const athletes = Object.keys(data).map((key) => {
+    const athletes = Object.keys(athletesData).map((key) => {
       return {
         slug: key,
-        photo: data[key].photo
+        photo: athletesData[key].photo
       }
     })
 

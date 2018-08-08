@@ -3,16 +3,16 @@ import Page from '../components/shared/Page'
 import Header from '../components/shared/Header'
 import LeftColumn from '../components/shared/LeftColumn'
 import RightColumn from '../components/shared/RightColumn'
-import Card from '../components/athlete/Card'
+import Card from '../components/shared/Card'
 import Contact from '../components/athlete/Contact'
 import Related from '../components/athlete/Related'
 import Main from '../components/athlete/Main'
-import data from '../lib/data'
+import athletes from '../lib/data/athletes'
 
 export default class Sportization extends Component {
   static async getInitialProps(context) {
     const slug = context.query.slug || 'adriana-behar'
-    const athlete = data[slug]
+    const athlete = athletes[slug]
     return {athlete}
   }
 
