@@ -5,8 +5,12 @@ import Achievements from 'components/athlete/Achievements'
 
 export default class AthleteMain extends Component {
   render() {
-    const {fullName, sport, jobTitle, activeDateFrom, activeDateTo,
-           hometown, photo, achievements} = this.props
+    const {
+      fullName, sport, jobTitle,
+      activeDateFrom, activeDateTo,
+      hometown, photo, achievements,
+    } = this.props
+
     return (
       <Container>
         <h1>{fullName}</h1>

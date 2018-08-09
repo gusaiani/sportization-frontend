@@ -5,5 +5,6 @@ export default styled.header`
 `
 
 export const Img = styled.img`
+  cursor: pointer;
   width: 121px;
 `

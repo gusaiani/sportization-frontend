@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export default styled.div`
-  margin-top: 50px;
+  clear: both;
+  padding-top: 50px;
 
   h5 {
     font-weight: normal;
