@@ -22,7 +22,7 @@ const startServer = () => {
       server.get(
         '/athletes/:slug',
         (req, res) => {
-          const actualPage = '/index'
+          const actualPage = '/athletes/show'
           const queryParams = {slug: req.params.slug, ...req.query}
           app.render(req, res, actualPage, queryParams)
         }
@@ -31,7 +31,7 @@ const startServer = () => {
       server.get(
         '/teams',
         (req, res) => {
-          const actualPage = '/teams'
+          const actualPage = '/teams/show'
           app.render(req, res, actualPage, req.query)
         }
       )
@@ -39,14 +39,18 @@ const startServer = () => {
       server.get(
         '/teams/:slug',
         (req, res) => {
-          const actualPage = '/teams'
+          const actualPage = '/teams/show'
           const queryParams = {slug: req.params.slug, ...req.query}
           app.render(req, res, actualPage, queryParams)
         }
       )
 
+      server.get('/', (req, res) => {
+        return app.render(req, res, '/athletes/show', req.query)
+      })
+
       server.get('*', (req, res) => {
-        return handle(req, res)
+        return app.render(req, res, '/athletes/show', req.query)
       })
 
       server.listen(port, (err) => {
