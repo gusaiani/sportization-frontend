@@ -19,34 +19,29 @@ const startServer = () => {
         })
       }
 
-      server.use(function(req, res, next) {
-        res.locals.app = app
-        next()
-      })
-
       server.get(
         '/athletes/:slug',
         (req, res) => {
           const actualPage = '/index'
           const queryParams = {slug: req.params.slug, ...req.query}
-          res.locals.app.render(req, res, actualPage, queryParams)
+          app.render(req, res, actualPage, queryParams)
         }
       )
 
       server.get(
         '/teams',
         (req, res) => {
-          const actualPage = '/teams/index'
-          res.locals.app.render(req, res, actualPage)
+          const actualPage = '/teams'
+          app.render(req, res, actualPage, req.query)
         }
       )
 
       server.get(
         '/teams/:slug',
         (req, res) => {
-          const actualPage = '/teams/index'
+          const actualPage = '/teams'
           const queryParams = {slug: req.params.slug, ...req.query}
-          res.locals.app.render(req, res, actualPage, queryParams)
+          app.render(req, res, actualPage, queryParams)
         }
       )
 
