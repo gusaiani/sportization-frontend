@@ -31,7 +31,7 @@ export const Flag = styled.div`
   padding: 4px 4px 4px 6px;
   position: absolute;
   text-transform: uppercase;
-  bottom: 14px;
+  top: 14px;
 
   img {
     border-radius: 6px;

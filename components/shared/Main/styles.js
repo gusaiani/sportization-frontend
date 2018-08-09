@@ -22,6 +22,13 @@ export const Header = styled.div`
     font-weight: normal;
     margin: 10px 0 0;
   }
+
+  h4 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
 `
 
 export const TeamThumbnail = styled.div`
