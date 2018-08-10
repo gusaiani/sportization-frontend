@@ -16,8 +16,8 @@ export default class AthleteMain extends Component {
       photo, achievements, team
     } = this.props
 
-    const teamFilename = teams[team].photo
-    const teamPhotoUrl = imageUrl(teamFilename)
+    const teamFilename = team && teams[team].photo
+    const teamPhotoUrl = team && imageUrl(teamFilename)
 
     return (
       <Container>
@@ -29,9 +29,11 @@ export default class AthleteMain extends Component {
           <h3>Lives in {hometown}</h3>
         </Header>
 
-        <Link href={`/teams?slug=${team}`} as={`/teams/${team}`}>
-          <TeamThumbnail style={{backgroundImage: `url(${teamPhotoUrl})`}}/>
-        </Link>
+        {team &&
+          <Link href={`/teams?slug=${team}`} as={`/teams/${team}`}>
+            <TeamThumbnail style={{backgroundImage: `url(${teamPhotoUrl})`}}/>
+          </Link>
+        }
 
         <Achievements achievements={achievements} />
         <GreatMoments photo={photo} />
