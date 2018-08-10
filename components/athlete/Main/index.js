@@ -3,7 +3,7 @@ import {Component, Fragment} from 'react'
 import Container, {
   TeamThumbnail, Header
 } from 'components/shared/Main/styles'
-import GreatMoments from '../GreatMoments'
+import Photos from 'components/shared/Main/Photos'
 import Achievements from '../Achievements'
 import teams from 'lib/data/teams'
 import {imageUrl} from 'utils/image'
@@ -36,7 +36,7 @@ export default class AthleteMain extends Component {
         }
 
         <Achievements achievements={achievements} />
-        <GreatMoments photo={photo} />
+        <Photos label="Great Moments" photo={photo} />
       </Container>
     )
   }

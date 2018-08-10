@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export default styled.div`
+  clear: both;
   float: left;
   margin-top: 50px;
 

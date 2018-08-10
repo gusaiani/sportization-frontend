@@ -1,7 +1,9 @@
 import {Component, Fragment} from 'react'
 import Container, {Header} from 'components/shared/Main/styles'
-import GreatMoments from 'components/athlete/GreatMoments'
+import Photos from 'components/shared/Main/Photos'
+import PhotosWithLinks from 'components/shared/Main/PhotosWithLinks'
 import Achievements from 'components/athlete/Achievements'
+import athletesData from 'lib/data/athletes'
 
 export default class AthleteMain extends Component {
   render() {
@@ -9,7 +11,15 @@ export default class AthleteMain extends Component {
       fullName, sport, jobTitle,
       activeDateFrom, activeDateTo,
       hometown, photo, achievements,
+      athletes
     } = this.props
+
+    const athleteImgsAndLinks = athletes.map(athlete => {
+      return {
+        slug: athlete,
+        photo: athletesData[athlete].photo
+      }
+    })
 
     return (
       <Container>
@@ -21,7 +31,8 @@ export default class AthleteMain extends Component {
         </Header>
 
         <Achievements achievements={achievements} />
-        <GreatMoments photo={photo} />
+        <PhotosWithLinks label="Members" items={athleteImgsAndLinks} />
+        <Photos label="Great Moments" photo={photo} />
       </Container>
     )
   }

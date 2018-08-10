@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export default styled.div`
   border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
   background-position: center;
   background-size: cover;
   position: relative;
