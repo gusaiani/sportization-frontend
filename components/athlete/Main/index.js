@@ -22,9 +22,9 @@ export default class AthleteMain extends Component {
     return (
       <Container>
         <Header>
-          <h4>Athlete</h4>
+          <h4>{jobTitle}</h4>
           <h1>{fullName}</h1>
-          <h2>{sport} · {jobTitle}</h2>
+          <h2>{sport}</h2>
           <h3>Born in {birthDate} in {birthPlace}</h3>
           <h3>Lives in {hometown}</h3>
         </Header>

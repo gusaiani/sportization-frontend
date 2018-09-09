@@ -10,9 +10,10 @@ export default class AthleteAchievements extends Component {
       <Container>
         <h5>Top Achievements</h5>
 
-        {achievements.map(({event, times, rank}) => {
+        {achievements.map(({event, times, rank}, i) => {
           return (
             <Achievement
+              key={i}
               event={event}
               rank={rank}
               times={times}

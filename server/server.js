@@ -46,11 +46,11 @@ const startServer = () => {
       )
 
       server.get('/', (req, res) => {
-        return app.render(req, res, '/athletes/show', req.query)
+        return app.render(req, res, '/', req.query)
       })
 
       server.get('*', (req, res) => {
-        return app.render(req, res, '/athletes/show', req.query)
+        return app.render(req, res, '/', req.query)
       })
 
       server.listen(port, (err) => {

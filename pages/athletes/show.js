@@ -9,7 +9,7 @@ import Related from 'components/athlete/Related'
 import Main from 'components/athlete/Main'
 import athletes from 'lib/data/athletes'
 
-export default class Sportization extends Component {
+export default class Athletes extends Component {
   static async getInitialProps(context) {
     const slug = context.query.slug || 'adriana-behar'
     const athlete = athletes[slug]
