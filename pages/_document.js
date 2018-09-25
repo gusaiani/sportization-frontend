@@ -24,7 +24,18 @@ export default class AppDocument extends Document {
             content="initial-scale=1.0, width=device-width"
             key="viewport"
           />
+
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126452166-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-126452166-1');
+          </script>
         </Head>
+
         <body>
           <Main />
           <NextScript />
