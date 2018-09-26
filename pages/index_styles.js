@@ -1,9 +1,15 @@
 import styled from 'styled-components'
 
-export const Img = styled.img`
+export const Logo = styled.img`
   display: block;
-  margin: 100px auto;
-  width: 121px;
+  margin: 100px auto 40px;
+  width: 280px;
+`
+
+export const Tagline = styled.img`
+  display: block;
+  margin: 40px auto 100px;
+  width: 240px;
 `
 
 export const Links = styled.div`

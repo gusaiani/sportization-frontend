@@ -1,7 +1,8 @@
 import {Component} from 'react'
 import Link from 'next/link'
 import Page from 'components/shared/Page'
-import {Img, Links} from './index_styles'
+import {Logo, Tagline, Links} from './index_styles'
+import {imageUrl} from 'utils/image'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import {
   faFacebook,
@@ -14,7 +15,9 @@ export default class Sportization extends Component {
   render() {
     return (
       <Page>
-        <Img src="/static/images/sportization-logo.png"/>
+        <Logo src={imageUrl('sportization-logo-large.png')}/>
+
+        <Tagline src={imageUrl('sportization-tagline-large.png')}/>
 
         <Links>
           <Link href="https://www.facebook.com/Sportization/">
